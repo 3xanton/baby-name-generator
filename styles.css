@@ -61,6 +61,7 @@ h1 {
 
 /* Name display */
 #baby-name {
+    font-family: 'Pacifico', cursive;
     font-size: 5rem;
     color: #333;
     margin-bottom: 2rem;
