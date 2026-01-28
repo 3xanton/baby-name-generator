@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 2rem 1rem;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+/* Filter buttons */
+.filter-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+    background: white;
+    color: #666;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #ff7e5f;
+    color: #ff7e5f;
+}
+
+.filter-btn.active {
+    background: #ff7e5f;
+    color: white;
+    border-color: #ff7e5f;
+}
+
+/* Name display */
+#baby-name {
+    font-size: 5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    min-height: 1.2em;
+    transition: opacity 0.3s ease;
+    word-wrap: break-word;
+}
+
+/* Action buttons */
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.generate-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.5);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+#favorite-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #ff7e5f;
+    border: 2px solid #ff7e5f;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#favorite-btn:hover,
+#favorite-btn.is-favorite {
+    background: #ff7e5f;
+    color: white;
+}
+
+/* Favorites section */
+.favorites {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.favorites h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+#favorites-empty {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+#favorites-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.4rem 0.6rem 0.4rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-name {
+    font-size: 0.95rem;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.remove-btn {
+    background: #ddd;
+    border: none;
+    color: #666;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.remove-btn:hover {
+    background: #ff7e5f;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    #baby-name {
+        font-size: 3.5rem;
+    }
+
+    .generate-btn {
+        font-size: 1.1rem;
+        padding: 0.9rem 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem 0.75rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-group {
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    #baby-name {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .actions {
+        margin-bottom: 2rem;
+    }
+
+    .generate-btn {
+        font-size: 1rem;
+        padding: 0.85rem 1.75rem;
+    }
+
+    #favorite-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.25rem;
+    }
+
+    .favorites {
+        padding: 1rem;
+    }
+
+    .favorites h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 320px) {
+    #baby-name {
+        font-size: 2rem;
+    }
+
+    .generate-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .filter-btn {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
+    }
+}
